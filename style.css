@@ -1,0 +1,119 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(230, 119, 220);
+    color: rgb(172, 57, 172);
+}
+
+.container {
+    display:block;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(179.98deg, rgba(218, 79, 176, 0) 19.55%, #2f22dd 124.71%);
+}
+
+.infos {
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    color: white;
+    line-height: 30px;
+    font-family: Verdana;
+}
+
+.nome{
+    font-size: 25px;
+}
+
+.bio {
+    font-size: 15px;
+}
+
+.social {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+.content {
+    border-radius:  16px;
+    padding: 0;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(186, 102, 211);
+}
+
+.content li {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #da4dda2c;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer {
+    padding-top: 90px;
+    margin-bottom: auto;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+   
+   .img {
+    margin-top: 30px;
+   }
+   
+    .content {
+        height: 100vh;
+        margin: auto;
+        margin-top: 30;
+        width: 100%;
+        border-radius: 0%;
+        background-color: rgba(245, 222, 179, 0);
+    }
+
+    .container {
+        height: fit-content;
+    }
+    
+    .content li {
+        border: #2f22dd00;
+    }
+}
