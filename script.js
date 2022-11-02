@@ -1,26 +1,34 @@
+let username = document.getElementById("nome")
+let bio = document.getElementById("bio")
+
+var requestURL = 'https://gontyjo.github.io/infoabout-api/api.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+
+username.innerHTML = request.response[0].userinfo.nome
+bio.innerHTML = request.response[0].userinfo.bio
+}
+
 function openFunction(value){
 
-var numberValue = parseInt(value.id)   
-console.log(numberValue)
-
-switch(numberValue){
-    case 1: window.open("https://www.instagram.com/rodrigogontyjo/")
-        break
-    case 2: window.open("https://twitter.com/rodrigogontyjo")
-        break   
-    case 3: window.open("https://web.facebook.com/rodrigo.gontyjo")
-        break
-    case 4: window.open("https://github.com/Gontyjo")
-        break
-    case 5: window.open("https://www.linkedin.com/in/rodrigo-gontyjo-6a5910197")
-        break
-    default: window.open("https://linkr.bio/rodrigogontyjo")
-}
-}
-
-
-
-
-
-
-console.log('hi')
+    var numberValue = parseInt(value.id)   
+    console.log(numberValue)
+    
+    switch(numberValue){
+        case 1: window.open(request.response[0].userinfo.usermedias.instagram)
+            break
+        case 2: window.open(request.response[0].userinfo.usermedias.twitter)
+            break   
+        case 3: window.open(request.response[0].userinfo.usermedias.facebook)
+            break
+        case 4: window.open(request.response[0].userinfo.usermedias.github)
+            break
+        case 5: window.open(request.response[0].userinfo.usermedias.linkedin)
+            break
+        default: window.open(request.response[0].userinfo.usermedias.linkr)
+    }
+    }
