@@ -11,7 +11,7 @@ body {
 .container {
     display:block;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 9rem;
     height: 100vh;
     background: linear-gradient(179.98deg, rgba(218, 79, 176, 0) 19.55%, #2f22dd 124.71%);
 }
@@ -112,6 +112,7 @@ body {
 
     .container {
         height: fit-content;
+        margin-top: 0rem;
     }
     
     .content li {
