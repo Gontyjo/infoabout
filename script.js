@@ -1,5 +1,6 @@
 let username = document.getElementById("nome")
 let bio = document.getElementById("bio")
+let image = document.getElementById("image")
 
 var requestURL = 'https://gontyjo.github.io/infoabout-api/api.json';
 var request = new XMLHttpRequest();
@@ -11,6 +12,7 @@ request.onload = function() {
 
 username.innerHTML = request.response[0].userinfo.nome
 bio.innerHTML = request.response[0].userinfo.bio
+image.src = request.response[0].userinfo.image
 }
 
 function openFunction(value){
